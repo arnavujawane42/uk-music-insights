@@ -1,0 +1,3 @@
+artist,origin,country,source
+# Add verified artist-origin information here if domestic/international analysis is required.
+# Example format: Artist Name,UK,United Kingdom,Source URL

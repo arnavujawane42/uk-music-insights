@@ -1,0 +1,31 @@
+UK Top 50 Playlist Market Analysis - Student Video Script
+
+1. Introduction
+Hello, in this project I analyzed daily UK Top 50 playlist data. The main goal was to understand the structure of the UK music market instead of only looking at popularity.
+
+2. Dataset
+The dataset contains date, position, song, artist, popularity, duration, album type, album size, explicit flag and album artwork URL. I first checked the data for missing values and duplicates.
+
+3. Data Cleaning
+I converted the date column, removed exact duplicate rows, and kept one record for each date and playlist position. I also standardized artist and album type text.
+
+4. Artist Diversity
+I counted artists appearing in the playlist and calculated concentration and diversity measures. This helps show whether the same artists appear repeatedly or whether many artists are represented.
+
+5. Collaboration
+I identified collaborations using the ampersand symbol in the artist field. I compared solo and collaborative tracks and created a simple collaboration network.
+
+6. Explicit Content
+I compared explicit and clean tracks and also compared the Top 10 with positions 11 to 50.
+
+7. Album Structure
+I compared album, single and compilation entries and looked at average album size.
+
+8. Track Duration
+I converted milliseconds into minutes and grouped tracks into short, medium and long categories. I also compared duration with popularity.
+
+9. Dashboard
+The Streamlit dashboard allows users to select a date range, artist, solo or collaboration tracks, and album type. It then updates the charts and metrics.
+
+10. Limitation and Conclusion
+The dataset does not contain artist nationality, so I did not make a domestic versus international claim from this data alone. Overall, the project provides a simple interactive view of artist diversity, collaboration, content and release structure in the UK Top 50.
