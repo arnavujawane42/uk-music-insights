@@ -1226,13 +1226,16 @@ elif page == "Collaboration Studio":
             ]
         )
 
+        # Apply the shared theme first, then network-specific settings.
+        # Keeping these calls separate avoids duplicate keyword arguments.
+        fig.update_layout(**LAYOUT)
         fig.update_layout(
-    **{**LAYOUT, "margin": dict(l=10, r=10, t=15, b=10)},
-    height=550,
-    showlegend=False,
-    xaxis=dict(visible=False),
-    yaxis=dict(visible=False)
-   )
+            height=550,
+            margin=dict(l=10, r=10, t=15, b=10),
+            showlegend=False,
+            xaxis=dict(visible=False),
+            yaxis=dict(visible=False),
+        )
 
         st.plotly_chart(
             fig,
