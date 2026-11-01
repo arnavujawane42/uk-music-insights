@@ -1227,18 +1227,12 @@ elif page == "Collaboration Studio":
         )
 
         fig.update_layout(
-            **LAYOUT,
-            height=550,
-            showlegend=False,
-            xaxis=dict(visible=False),
-            yaxis=dict(visible=False),
-            margin=dict(
-                l=10,
-                r=10,
-                t=15,
-                b=10,
-            ),
-        )
+    **{**LAYOUT, "margin": dict(l=10, r=10, t=15, b=10)},
+    height=550,
+    showlegend=False,
+    xaxis=dict(visible=False),
+    yaxis=dict(visible=False)
+   )
 
         st.plotly_chart(
             fig,
